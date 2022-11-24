@@ -1,0 +1,114 @@
+.main {
+
+    // .main__container
+
+    &__container {
+    }
+
+    // .main__body
+
+    &__body {
+        margin-top: 130px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 334px;
+    }
+
+    // .main__block
+
+    &__block {
+    }
+
+    // .main__title
+
+    &__title {
+        max-width: 549px;
+        margin-bottom: 20px;
+        padding-top: 57px;
+    }
+
+    // .main__text
+
+    &__text {
+        max-width: 511px;
+        margin-bottom: 80px;
+    }
+
+    // .main__btn
+
+    &__btn {
+        padding-top: 20px;
+        padding-bottom: 21px;
+        padding-left: 40px;
+        padding-right: 35px;
+        background: $primary-color;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 160%;
+        letter-spacing: 0.005em;
+        text-transform: uppercase;
+        color: $main-color;
+        display: inline-block;
+    }
+
+    // .main__image
+
+    &__image {
+        width: 710px;
+        height: 440px;
+        background: url(/img/home01.png);
+        @include background;
+        border-radius: 30px;
+    }
+
+     // .main__slider
+
+    &__slider {
+        width: 710px;
+        height: 440px;
+        border-radius: 30px;
+    }
+    
+    // .main__slider-wrapper
+    
+    &__slider-wrapper {
+    }
+    
+    // .main__slide
+    
+    &__slide {
+        height: 100%;
+        width: 100%;
+        background: url(/img/home01.png);
+        @include background;
+        padding-left: 40px;
+        color: $main-color;
+    }
+    
+    // .main__slider-title
+    
+    &__slide-title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 160%;
+        letter-spacing: 0.005em;
+        margin-top: 266px;
+        margin-bottom: 10px;
+    }
+    
+    // .main__slider-text
+    
+    &__slide-text {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 160%;
+        letter-spacing: 0.005em;
+        max-width: 427px;
+    }
+
+    &__slider-pagination {
+        width: 30px;
+    }
+
+}

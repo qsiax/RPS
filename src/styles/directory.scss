@@ -1,0 +1,54 @@
+.directory {
+    // .directory__container
+
+    &__container {
+    }
+
+    // .directory__body
+
+    &__body {
+        margin-top: 60px;
+        margin-bottom: 610px;
+    }
+
+    // .directory__block
+
+    &__block {
+    }
+
+    // .directory__subtitle
+
+    &__subtitle {
+        margin-bottom: 5px;
+    }
+
+    // .directory__title
+
+    &__title {
+    }
+
+    &__footer {
+        position: relative;
+        min-width: 100%;
+        height: 215px;
+        background: url(/img/directory-footer.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: $primary-color;
+        display: flex;
+    }
+
+    &__footer-el {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        background: url(/img/directory-footer-el.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        bottom: 32px;
+        right: 41px;
+        &:nth-child(1) {
+            margin-right: 90px;
+        }
+    }
+}

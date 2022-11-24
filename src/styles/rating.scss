@@ -1,0 +1,63 @@
+.rating {
+    background: $primary-color;
+    * {
+        color: $main-color;
+    }
+    // .rating__container
+
+    &__container {
+    }
+
+    // .rating__body
+
+    &__body {
+        padding-top: 100px;
+    }
+
+    // .rating__block
+
+    &__block {
+        padding-bottom: 60px;
+    }
+
+    // .rating__subtitle
+
+    &__subtitle {
+        margin-bottom: 5px;
+    }
+
+    // .rating__title
+
+    &__title {
+    }
+
+    &__box {
+        width: 100%;
+        height: 894px;
+        background: $main-color;
+        border-radius: 50px;
+    }
+
+    &__footer { 
+        position: relative;
+        min-width: 100%;
+        height: 207px;
+        background: url(/img/rating-footer.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: $primary-color;
+    }
+
+    &__footer-el {
+        position: absolute;
+        left: 40px;
+        top: 32px;
+        width: 70px;
+        height: 70px;
+        background: url(/img/directory-footer-el.svg);
+        @include background;
+        &:nth-child(2) {
+            margin-left: 90px;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.contact {
+    background: $main-color;
+    transform: translateY(-1px);
+    // .contact__container
+
+    &__container {
+    }
+
+    // .contact__body
+
+    &__body {
+        padding-top: 120px;
+        padding-bottom: 700px;
+    }
+
+    // .contact__block
+
+    &__block {
+    }
+
+    // .contact__subtitle
+
+    &__subtitle {
+        margin-bottom: 5px;
+    }
+
+    // .contact__title
+
+    &__title {
+    }
+}

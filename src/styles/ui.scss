@@ -1,0 +1,55 @@
+$main-color: #fff;
+$primary-color: #0047FF;
+$secondary-color: #00214A;
+$text: #00214A;
+
+@mixin background {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@mixin font {
+    font-family: 'Manrope', sans-serif;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 140%;
+    letter-spacing: 0.005em;
+    text-transform: uppercase;
+}
+.sub-title {
+    color: $primary-color;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: 0.005em;
+    text-transform: uppercase;
+}
+.text-1level {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 160%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+}
+.text-2level {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: 0.005em;
+    text-transform: uppercase;
+}
+.text-3level {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: 0.005em;
+}
+.num {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 140%;
+    letter-spacing: 0.005em;
+    text-transform: uppercase;
+}
