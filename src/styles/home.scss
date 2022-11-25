@@ -17,6 +17,7 @@
     // .main__block
 
     &__block {
+        position: relative;
     }
 
     // .main__title
@@ -49,7 +50,23 @@
         letter-spacing: 0.005em;
         text-transform: uppercase;
         color: $main-color;
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 266px;
+        transition: .5s ease;
+        &:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+    }
+
+    &__btn-icon {
+        width: 26px;
+        height: 26px;
+        background: url(/img/main-arrow.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-left: 10px;
     }
 
     // .main__image
@@ -109,6 +126,29 @@
 
     &__slider-pagination {
         width: 30px;
+    }
+
+    &__el {
+        position: absolute;
+        &:nth-child(1) {
+            top: 20px;
+            right: -10px;
+            width: 98.42px;
+            height: 69.14px;
+            background: url(/img/main-el.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        &:nth-child(2) {
+            position: absolute;
+            right: -50px;
+            bottom: 60px;
+            width: 90px;
+            height: 76.14px;
+            background: url(/img/main-el-1.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
     }
 
 }

@@ -10,39 +10,77 @@
 </head>
 
 <body>
+	<!-- PRELOADER -->
 	<div class="overlay second"></div>
 	<div class="overlay firts"></div>
 	<div class="overlay four"></div>
 	<div class="overlay five"></div>
 	<div class="overlay six"></div>
 
+	<!-- POPUP -->
+	<div class="auth">
+		<div class="auth__close-wrapper" onclick="authToggle()">
+			<div class="auth__close"></div>
+		</div>
+		<div class="auth__title">Войти</div>
+		<form action="" class="auth__form">
+			<div class="auth__form-title">Логин</div>
+			<input type="email" placeholder="Введите">
+			<div class="auth__form-title">Пароль</div>
+			<input type="password" placeholder="Введите">
+			<div class="auth__form-btns">
+				<button type="submit">Войти</button>
+				<a href="#" onclick="signupToggle()">Зарегистрироваться</a>
+			</div>
+		</form>
+	</div>
+
+	<div class="signup">
+		<div class="signup__close-wrapper" onclick="signupToggle()">
+			<div class="signup__close"></div>
+		</div>
+		<div class="signup__title">Регистрация</div>
+		<form action="" class="signup__form">
+			<div class="signup__form-title">Придумайте логин</div>
+			<input type="email" placeholder="Введите">
+			<div class="signup__form-title">Придумайте пароль</div>
+			<input type="password" placeholder="Введите">
+			<div class="signup__form-title">Повторите пароль</div>
+			<input type="password" placeholder="Введите">
+			<div class="signup__form-btns">
+				<button type="submit">Зарегистрироваться</button>
+			</div>
+		</form>
+	</div>
+
+	<!-- WRAPPER -->
 	<div class="wrapper">
 		<div class="inside-wrapper">
 
-			<div class="auth-wrapper">
-				<div class="auth"></div>
-			</div>
-
+			<!-- HEADER -->
 			<header class="header">
 				<div class="header__container">
 					<div class="header__body">
 						<div class="header__block">
 							<div class="header__logo"></div>
+							<div class="header__menu"></div>
 						</div>
 						<div class="header__block">
 							<ul class="header__navigation">
-								<li><a href="#">Главная</a></li>
-								<li><a href="#">О сервисе</a></li>
-								<li><a href="#">Справочник</a></li>
-								<li><a href="#">Карта</a></li>
-								<li><a href="#">Рейтинг</a></li>
-								<li><a href="#">Контакты</a></li>
+								<li><a href="#main">Главная</a></li>
+								<li><a href="#service">О сервисе</a></li>
+								<li><a href="#directory">Справочник</a></li>
+								<li><a href="#map">Карта</a></li>
+								<li><a href="#rating">Рейтинг</a></li>
+								<li><a href="#contact">Контакты</a></li>
 							</ul>
 						</div>
 						<div class="header__block">
-							<div class="header__switch"></div>
-							<div class="header__profile-box">
-								<span></span>
+							<div class="header__switch" onclick="darkMode()">
+								<div class="header__switch-el"></div>
+							</div>
+							<div class="header__profile-box" onclick="authToggle()">
+								<div class="header__profile-icon"></div>
 								<p>Кабинет</p>
 							</div>
 						</div>
@@ -50,13 +88,18 @@
 				</div>
 			</header>
 
-			<section class="main">
+			<!-- MAIN -->
+			<section class="main" id="main">
 				<div class="main__container _container">
 					<div class="main__body">
 						<div class="main__block">
-							<div class="main__title title">Можем сделать якутию - Надежной</div>
+							<div class="main__title title">Вместе сделаем якутию - Надежной</div>
 							<div class="main__text text-2level">Открытая площадка с комментированием работы ИП</div>
-							<a href="#" class="main__btn">Узнать Больше</a>
+							<a href="#directory" class="main__btn">Узнать Больше <div class="main__btn-icon"></div></a>
+							<div class="main__el-wrapper">
+								<div class="main__el"></div>
+								<div class="main__el"></div>
+							</div>
 						</div>
 						<div class="main__block">
 							<div class="main__slider swiper">
@@ -85,7 +128,8 @@
 				</div>
 			</section>
 
-			<section class="service">
+			<!-- SERVICE -->
+			<section class="service" id="service">
 				<div class="service__container _container">
 					<div class="service__body">
 						<div class="service__block">
@@ -122,12 +166,47 @@
 				</div>
 			</section>
 
-			<section class="directory">
+			<section class="directory" id="directory">
 				<div class="directory__container _container">
 					<div class="directory__body">
-						<div class="directory__block">
+						<div class="directory__head">
 							<div class="directory__subtitle sub-title">Guide</div>
 							<div class="directory__title title">Справочник</div>
+						</div>
+						<div class="directory__content">
+							<div class="directory__wrapper">
+								<div class="directory__block">
+									<div class="directory__heading">Бонусная система</div>
+									<div class="directory__text">У нас имеется бонусная система со скидками у партнеров до 20%. Как ими воспользвоваться и накопить? Все просто отправляйте комментарии на ИП и копите бонусы, а уже в личном кабинете потратитье их!</div>
+									<div class="directory__img"></div>
+								</div>
+								<div class="directory__block">
+									<div class="directory__heading">Рейтинговая система</div>
+									<div class="directory__text">В рейтинге вы можете увидеть свою позиции среди остальных пользователей и посмотреть кто самый активный! Самый активный пользователь получает повышение до “модератора”!</div>
+									<div class="directory__img"></div>
+								</div>
+							</div>
+							<div class="directory__wrapper">
+								<div class="directory__block">
+									<div class="directory__img"></div>
+									<div class="directory__heading">Интерактивная карта</div>
+									<div class="directory__text">Вы можете увидеть на карте какие ИП принимают оплаты моб.банком или не имеют кассы и все это происходит в реальном времени.</div>
+									<div class="directory__item-wrapper">
+										<div class="directory__item">
+											<div class="directory__item-icon"></div>
+											<div class="directory__item-text">- Отказано</div>
+										</div>
+										<div class="directory__item">
+											<div class="directory__item-icon"></div>
+											<div class="directory__item-text">- Ожидание</div>
+										</div>
+										<div class="directory__item">
+											<div class="directory__item-icon"></div>
+											<div class="directory__item-text">- Подтверждено</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 			</section>
@@ -137,7 +216,7 @@
 				<div class="directory__footer-el"></div>
 			</div>
 
-			<section class="map">
+			<section class="map" id="map">
 				<div class="map__container _container">
 					<div class="map__body">
 						<div class="map__block">
@@ -149,11 +228,11 @@
 				</div>
 			</section>
 
-			<section class="rating">
+			<section class="rating" id="rating">
 				<div class="rating__container _container">
 					<div class="rating__body">
 						<div class="rating__block">
-							<div class="rating__subtitle sub-title">Interactive map</div>
+							<div class="rating__subtitle sub-title">Rating of participants</div>
 							<div class="rating__title title">Рейтинг участников</div>
 						</div>
 						<div class="rating__block">
@@ -168,12 +247,23 @@
 				<div class="rating__footer-el"></div>
 			</div>
 
-			<section class="contact">
+			<section class="contact" id="contact">
 				<div class="contact__container _container">
 					<div class="contact__body">
 						<div class="contact__block">
 							<div class="contact__subtitle sub-title">Contacts</div>
 							<div class="contact__title title">Контакты</div>
+							<div class="contact__head">Номер</div>
+							<div class="contact__text">+79841084114</div>
+							<div class="contact__head">Адрес</div>
+							<div class="contact__text">Проспект Ленина 1</div>
+							<div class="contact__head">Почта</div>
+							<div class="contact__text">qwertuipp15@gmail.com</div>
+						</div>
+						<div class="contact__block">
+							<div class="contact__map">
+								<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa5a663e08dee1a5571e70b5d42213cb15f1fcb0413e609d0bd7877f38c7b4aaf&amp;source=constructor" width="832" height="500" frameborder="0"></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -181,6 +271,56 @@
 
 		</div>
 	</div>
+	<div class="footer__back"></div>
+	<footer class="footer" id="footer">
+
+		<div class="footer__container _container">
+			<div class="footer__body">
+				<div class="footer__block">
+					<a href="#main" class="footer__logo"></a>
+					<ul class="footer__navigaion">
+						<li><a href="#main">Главная</a></li>
+						<li><a href="#service">О сервисе</a></li>
+						<li><a href="#directory">Справочник</a></li>
+						<li><a href="#map">Карта</a></li>
+						<li><a href="#rating">Рейтинг</a></li>
+						<li><a href="#contact">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="footer__block">
+					<div class="footer__text">© 2022 yanadzor</div>
+					<div class="footer__text">Политика конфиденциальности</div>
+					<div class="footer__text">Разработка - RPS</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+	function signupToggle() {
+	var signup = document.querySelector('.signup');
+	var auth = document.querySelector('.auth');
+
+	auth.classList.toggle('active');
+	signup.classList.toggle('active'); 
+	}
+
+	function authToggle() {
+		var auth = document.querySelector('.auth');
+		var wrapper = document.querySelector('.wrapper');
+
+		wrapper.classList.toggle('popup'); 
+		auth.classList.toggle('active');
+	}
+
+	function darkMode() {
+		var switchBtn = document.querySelector(".header__switch");
+		var body = document.body;
+
+		switchBtn.classList.toggle('dark');
+		body.classList.toggle('dark');
+	}
+	</script>
 </body>
 
 </html>

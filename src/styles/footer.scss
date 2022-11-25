@@ -1,0 +1,100 @@
+.footer {
+    position: relative;
+    background: $secondary-color;
+    clip-path: polygon(0% 0%, 100% 27%, 100% 100%, 0% 100%);
+    z-index: 1;
+    * {
+        color: $main-color;
+    }
+
+    &__back {
+        position: absolute;
+        width: 100%;
+        height: 315px;
+        background: $primary-color;
+        right: 0;
+        bottom: 10px;
+        clip-path: polygon(0% 27%, 100% 0%, 100% 100%, 0% 100%);
+        z-index: 1;
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    // .footer__body
+
+    &__body {
+    }
+
+    // .footer__block
+
+    &__block {
+        display: flex;
+        align-items: center;
+        &:nth-child(1) {
+            justify-content: center;
+        }
+        &:nth-child(2) {
+           justify-content: space-between;
+        }
+    }
+
+    // .footer__logo
+
+    &__logo {
+        width: 156px;
+        height: 54px;
+        background: url(/img/logo-dark.svg);
+        @include background;
+        position: absolute;
+        left: 0;
+        top: 124px;
+    }
+
+    // .footer__navigaion
+
+    &__navigaion {
+        display: flex;
+        align-items: center;
+        padding-top: 136px;
+        padding-bottom: 81px;
+        li {
+            margin-right: 50px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 160%;
+            letter-spacing: 0.005em;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        a {
+            position: relative;
+            &:hover::before {
+                left: 0;
+                width: 100%;
+                right: auto;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                width: 0%;
+                height: 1px;
+                background: $main-color;
+                bottom: 1px;
+                right: 0;
+                transition: .5s ease;
+            }
+        }
+    }
+
+    // .footer__text
+
+    &__text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        padding-bottom: 41px;
+    }
+}

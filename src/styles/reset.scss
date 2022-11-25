@@ -3,6 +3,10 @@
     display: revert;
 }
 
+* {
+    scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {

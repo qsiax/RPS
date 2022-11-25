@@ -1,9 +1,11 @@
 .header {
-
+    background: url(/img/bg-nav.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
     // .header__container
 
     &__container {
-        max-width: 1690px;
+        max-width: 1660px;
         margin: 0 auto;
     }
 
@@ -18,6 +20,10 @@
     // .header__block
 
     &__block {
+        &:nth-child(3) {
+            display: flex;
+            align-items: center;
+        }
     }
 
     // .header__logo
@@ -43,10 +49,6 @@
         letter-spacing: 0.005em;
         padding-top: 34px;
         padding-bottom: 36px;
-        background: url(/img/bg-nav.svg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-color: $primary-color;
         padding-left: 228px;
         padding-right: 228px;
         li {
@@ -56,6 +58,22 @@
             }
             a {
                 color: $main-color;
+                position: relative;
+                &:hover::before {
+                    left: 0;
+                    width: 100%;
+                    right: auto;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 0%;
+                    height: 1px;
+                    background: $main-color;
+                    bottom: 1px;
+                    right: 0;
+                    transition: .5s ease;
+                }
             }
         }
     }
@@ -63,7 +81,33 @@
     // .header__switch
 
     &__switch {
+        width: 52px;
+        height: 30px;
+        border-radius: 51px;
+        background: $secondary-color;
+        margin-right: 30px;
+        position: relative;
+        padding: 3px;
+        cursor: pointer;
+        transition: .5s ease;
+        &.dark {
+            background: $main-color;
+            .header__switch-el {
+                background: $secondary-color;
+                margin-left: 22px;
+            }
+        }
     }
+
+    &__switch-el {
+        width: 24px;
+        height: 24px;
+        background: $main-color;
+        border-radius: 50%;
+        position: relative;
+        transition: .3s ease;
+    }
+
 
     // .header__profile-box
 
@@ -83,5 +127,13 @@
             letter-spacing: 0.005em;
             color: $secondary-color;
         }
+    }
+
+    &__profile-icon {
+        height: 24px;
+        width: 24px;
+        background: url(/img/user.svg);
+        @include background;
+        margin-right: 10px;
     }
 }

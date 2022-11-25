@@ -10,7 +10,9 @@
 
     &__body {
         padding-top: 120px;
-        padding-bottom: 700px;
+        padding-bottom: 163px;
+        display: flex;
+        justify-content: space-between;
     }
 
     // .contact__block
@@ -27,5 +29,40 @@
     // .contact__title
 
     &__title {
+        margin-bottom: 70px;
+    }
+
+    // .contact__head
+
+    &__head {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 140%;
+        letter-spacing: 0.005em;
+        color: $gray-dark;
+        margin-bottom: 5px;
+    }
+    
+    // .contact__text
+    
+    &__text {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 140%;
+        letter-spacing: 0.005em;
+        text-transform: uppercase;
+        color: $secondary-color;
+        margin-bottom: 60px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    
+    // .contact__map
+    
+    &__map {
+        border-radius: 50px;
+        overflow: hidden;
     }
 }
+

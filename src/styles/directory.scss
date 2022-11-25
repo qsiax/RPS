@@ -7,13 +7,83 @@
     // .directory__body
 
     &__body {
-        margin-top: 60px;
-        margin-bottom: 610px;
+        padding-top: 100px;
+        margin-bottom: 150px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__wrapper {
+
+        &:nth-child(1) {
+            .directory__block {
+                width: 832px;
+                height: 370px;
+                border: 1px solid $gray-light;
+                border-radius: 55px;
+                padding: 50px;
+                &:nth-child(1) {
+                    margin-bottom: 20px;
+                    .directory__text {
+                        max-width: 576px;
+                    }
+                }
+            }
+            .directory__block:nth-child(1) {
+                .directory__img {
+                    bottom: 0;
+                    right: 21px;
+                    width: 253px;
+                    height: 354px;
+                    background: url(/img/item01.png);
+                    @include background;
+                }
+            }
+            .directory__block:nth-child(2) {
+                .directory__img {
+                    top: -50px;
+                    right: -103px;
+                    width: 338.07px;
+                    height: 344.29px;
+                    background: url(/img/item02.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+        &:nth-child(2) {
+            .directory__block {
+                width: 588px;
+                height: 760px;
+                border: 1px solid $gray-light;
+                border-radius: 56px;
+                padding: 50px;
+                text-decoration-line: underline;
+                .directory__text {
+                    text-decoration-line: underline;
+                    margin-bottom: 40px;
+                }
+                .directory__img {
+                    bottom: -30px;
+                    right: -123px;
+                    width: 357.06px;
+                    height: 353.34px;
+                    background: url(/img/item03.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
     }
 
     // .directory__block
 
     &__block {
+        position: relative;
+        overflow: hidden;
     }
 
     // .directory__subtitle
@@ -25,7 +95,92 @@
     // .directory__title
 
     &__title {
+        margin-bottom: 60px;
     }
+
+    // .directory__heading
+
+    &__heading {
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 160%;
+        letter-spacing: 0.005em;
+        text-transform: uppercase;
+        color: $secondary-color;
+        max-width: 300px;
+        margin-bottom: 58px;
+    }
+
+    // .directory__text
+
+    &__text {
+        max-width: 600px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 160%;
+        letter-spacing: 0.005em;
+        color: $gray-dark;
+    }
+
+    // .directory__item-wrapper
+
+    &__item-wrapper {
+    }
+
+    // .directory__item
+
+    &__item {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 160%;
+        letter-spacing: 0.005em;
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:first-child {
+            .directory__item-icon {
+                background: url(/img/directory-item01.svg);
+                @include background;
+            }
+        }
+        &:nth-child(2) {
+            .directory__item-icon {
+                background: url(/img/directory-item02.svg);
+                @include background;
+            }
+        }
+        &:nth-child(3) {
+            .directory__item-icon {
+                background: url(/img/directory-item03.svg);
+                @include background;
+            }
+        }
+    }
+
+    // .directory__item-icon
+
+    &__item-icon {
+        width: 48px;
+        height: 50px;
+        margin-right: 18.33px;
+    }
+
+    // .directory__item-text
+
+    &__item-text {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 160%;
+        letter-spacing: 0.005em;
+    }
+
+    &__img {
+        position: absolute;
+    }
+
 
     &__footer {
         position: relative;

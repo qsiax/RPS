@@ -11,7 +11,6 @@ gsap.registerPlugin(ScrollTrigger, TweenMax);
 // Swiper
 const mainSlider = new Swiper('.main__slider', {
 	speed: 600,
-	mousewheel: true,
 	slidesPerView: 1,
 	spaceBetween: 0,
 	autoplay: {
@@ -28,7 +27,6 @@ const mainSlider = new Swiper('.main__slider', {
 			autoplay: false
 		}
 	},
-	grabCursor: true,
     pagination: {
         el: '.main__slider-pagination',
       },
@@ -73,3 +71,5 @@ TweenMax.to('.six', 1.5, {
 	height: "0%",
 	ease: Expo.easeInOut
 })
+
+
