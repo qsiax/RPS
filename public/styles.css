@@ -303,7 +303,7 @@ body.dark .rating__box {
   overflow: hidden;
 }
 
-.wrapper.popup {
+.wrapper.popupMain {
   filter: blur(15px);
   pointer-events: none;
   user-select: none;
@@ -1398,7 +1398,7 @@ body.pageDark .header-page__profile-icon {
   position: absolute;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 420px) {
   ._container {
     max-width: 344px;
     margin: 0 auto;

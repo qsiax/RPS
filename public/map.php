@@ -32,7 +32,7 @@
                 </div>
                 <div class="header-page__block">
                     <ul class="header-page__navigation">
-                        <li><a href="#">Главная</a></li>
+                        <li><a href="index.html">Главная</a></li>
                         <li><a href="#">Профиль</a></li>
                         <li><a href="#">Магазин</a></li>
                         <li><a href="#" class="active">Карта</a></li>
@@ -76,7 +76,7 @@
 				<div class="footer__block">
 					<a href="#main" class="footer__logo"></a>
 					<ul class="footer__navigaion">
-						<li><a href="#main">Главная</a></li>
+						<li><a href="index.html">Главная</a></li>
 						<li><a href="#service">О сервисе</a></li>
 						<li><a href="#directory">Справочник</a></li>
 						<li><a href="#map">Карта</a></li>
@@ -153,14 +153,19 @@
                 $x = $_POST['CoordinatesX'];
                 $y = $_POST['CoordinateY'];
 
-                echo 'var maker = L.marker([' . $x . ',' .  $y . '],{icon: yellowIcon}).addTo(map);';  
+                echo 'var marker = L.marker([' . $x . ',' .  $y . '],{icon: yellowIcon}).addTo(map);';  
         }
         ?>
   
 
 
-        var maker = L.marker([62.032664, 129.749947],{icon: redIcon}).addTo(map);
-        var maker = L.marker([51.5, -0.10],{icon: yellowIcon}).addTo(map);
+  var maker = L.marker([55.833, 37.549794],{icon: greenIcon}).addTo(map);
+	var maker = L.marker([62.032664, 129.749947],{icon: redIcon}).addTo(map);
+	var maker = L.marker([62.036558, 129.718066],{icon: yellowIcon}).addTo(map);
+	var maker = L.marker([62.056783, 129.729115],{icon: greenIcon}).addTo(map);
+	var maker = L.marker([62.004324, 129.665532],{icon: yellowIcon}).addTo(map);
+
+    marker.bindPopup("<b>123123</b>");
 
 
 

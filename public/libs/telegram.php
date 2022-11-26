@@ -2,8 +2,8 @@
 $name = $_POST['name'];
 $message = $_POST['message'];
 $email = $_POST['email'];
-$token = "5226728797:AAHMPwZuogFvXG6DDsndvkhKUwaZ1jpnUzI";
-$chat_id = "-613504786";
+$token = "";
+$chat_id = "";
 
 if ($email == '') {
   $email = 'Отсутствует';
