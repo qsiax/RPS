@@ -71,5 +71,3 @@ TweenMax.to('.six', 1.5, {
 	height: "0%",
 	ease: Expo.easeInOut
 })
-
-

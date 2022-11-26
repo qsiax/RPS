@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="assets/images/icon-logo.png" type="image/png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+	<title>Я - Надзор</title>
+</head>
+
+<body>
+	<!-- PRELOADER -->
+	<div class="overlay second"></div>
+	<div class="overlay firts"></div>
+	<div class="overlay four"></div>
+	<div class="overlay five"></div>
+	<div class="overlay six"></div>
+
+    <header class="header">
+        <div class="header__container">
+            <div class="header__body">
+                <div class="header__block">
+                    <div class="header__logo"></div>
+                    <div class="header__menu"></div>
+                </div>
+                <div class="header__block">
+                    <ul class="header__navigation">
+                        <li><a href="#main">Главная</a></li>
+                        <li><a href="#service">О сервисе</a></li>
+                        <li><a href="#directory">Справочник</a></li>
+                        <li><a href="#map">Карта</a></li>
+                        <li><a href="#rating">Рейтинг</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="header__block">
+                    <div class="header__switch" onclick="darkMode()">
+                        <div class="header__switch-el"></div>
+                    </div>
+                    <div class="header__profile-box" onclick="authToggle()">
+                        <div class="header__profile-icon"></div>
+                        <p>Кабинет</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <footer class="footer" id="footer">
+
+		<div class="footer__container _container">
+			<div class="footer__body">
+				<div class="footer__block">
+					<a href="#main" class="footer__logo"></a>
+					<ul class="footer__navigaion">
+						<li><a href="#main">Главная</a></li>
+						<li><a href="#service">О сервисе</a></li>
+						<li><a href="#directory">Справочник</a></li>
+						<li><a href="#map">Карта</a></li>
+						<li><a href="#rating">Рейтинг</a></li>
+						<li><a href="#contact">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="footer__block">
+					<div class="footer__text">© 2022 yanadzor</div>
+					<div class="footer__text">Политика конфиденциальности</div>
+					<div class="footer__text">Разработка - RPS</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+    <script>
+        // MAP
+        var map = L.map('map').setView([62.027221, 129.732178], 14);
+    
+        L.tileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=p0IK89pdtFrA9vMYxHZQ', {
+            attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+            tileSize: 512,
+            zoomOffset: -1,
+            minZoom: 1,
+        }).addTo(map);
+    
+        var FlagIcon = L.Icon.extend({
+            options: {
+                iconSize: [50, 50],
+            }
+        })
+    
+        var greenIcon = new FlagIcon({iconUrl: 'img/flag-green.svg'}),
+            redIcon = new FlagIcon({iconUrl: 'img/flag-red.svg'}),
+            yellowIcon = new FlagIcon({iconUrl: 'img/flag-yellow.svg'});
+    
+    
+    
+        var maker = L.marker([55.833, 37.549794],{icon: greenIcon}).addTo(map);
+        var maker = L.marker([62.032664, 129.749947],{icon: redIcon}).addTo(map);
+        var maker = L.marker([51.5, -0.10],{icon: yellowIcon}).addTo(map);
+    
+    
+        function signupToggle() {
+        var signup = document.querySelector('.signup');
+        var auth = document.querySelector('.auth');
+    
+        auth.classList.toggle('active');
+        signup.classList.toggle('active'); 
+        }
+    
+        function authToggle() {
+            var auth = document.querySelector('.auth');
+            var wrapper = document.querySelector('.wrapper');
+    
+            wrapper.classList.toggle('popup'); 
+            auth.classList.toggle('active');
+        }
+    
+        function darkMode() {
+            var switchBtn = document.querySelector(".header__switch");
+            var body = document.body;
+    
+            switchBtn.classList.toggle('dark');
+            body.classList.toggle('dark');
+        }
+        </script>
+    </body>
+    
+    </html>
