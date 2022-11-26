@@ -33,9 +33,12 @@
 
     &__box {
         width: 100%;
-        height: 894px;
+        height: 950px;
         background: $main-color;
         border-radius: 50px;
+        padding-left: 100px;
+        padding-top: 60px;
+        padding-right: 201px;
     }
 
     &__footer { 
@@ -59,5 +62,123 @@
         &:nth-child(2) {
             margin-left: 90px;
         }
+    }
+
+       // .rating__item
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 65px;
+        &:last-child {
+            margin-bottom: 50px;
+        }
+        * {
+            color: $secondary-color;
+        }
+    }
+
+    &__item-block {
+        display: flex;
+        align-items: center;
+        min-width: 278px;
+    }
+
+    // .rating__item-logo
+
+    &__item-logo {
+        width: 65px;
+        height: 54px;
+        background: url(/img/rating-logo.svg);
+        @include background;
+        margin-right: 40px;
+    }
+
+    // .rating__item-user
+
+    &__item-user {
+
+    }
+
+
+    // .rating__item-user-title
+
+    &__item-user-title {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 160%;
+        letter-spacing: 0.005em;
+        text-transform: uppercase;
+    }
+
+    // .rating__item-user-subtitle
+
+    &__item-user-subtitle {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 160%;
+        letter-spacing: 0.005em;
+        color: $primary-color;
+    }
+
+    // .rating__item-submit
+
+    &__item-submit {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 160%;
+        letter-spacing: 0.005em;
+    }
+
+    // .rating__item-score
+
+    &__item-score {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 160%;
+        letter-spacing: 0.005em;
+    }
+
+    // .rating__item-rate
+
+    &__item-rate {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 160%;
+        letter-spacing: 0.005em;
+    }
+
+    &__item-btn {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 160%;
+        letter-spacing: 0.005em;
+        text-transform: uppercase;
+        background: $primary-color;
+        border-radius: 50px;
+        padding-top: 20px;
+        padding-left: 40px;
+        padding-bottom: 21px;
+        padding-right: 22.5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 372px;
+        cursor: pointer;
+        transition: .3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    &__item-btn-icon {
+        width: 26px;
+        height: 26px;
+        background: url(/img/main-arrow.svg);
+        @include background;
+        margin-left: 10px;
     }
 }

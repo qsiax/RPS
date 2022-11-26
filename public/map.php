@@ -94,7 +94,7 @@
 	</footer>
     </div>
 
-    <form class="popup" method="POST" name="forma1">
+    <form class="popupForm" method="POST" name="forma1">
         <p>Текст</p>
         <input type="text" placeholder="Введите текст" name="text">
         <p>Адрес</p>
@@ -159,7 +159,7 @@
   
 
 
-  var maker = L.marker([55.833, 37.549794],{icon: greenIcon}).addTo(map);
+    var maker = L.marker([55.833, 37.549794],{icon: greenIcon}).addTo(map);
 	var maker = L.marker([62.032664, 129.749947],{icon: redIcon}).addTo(map);
 	var maker = L.marker([62.036558, 129.718066],{icon: yellowIcon}).addTo(map);
 	var maker = L.marker([62.056783, 129.729115],{icon: greenIcon}).addTo(map);
@@ -179,7 +179,7 @@
         }
 
         function formPopup() {
-            var formPopup = document.querySelector('.popup');
+            var formPopup = document.querySelector('.popupForm');
             var blur = document.querySelector('.wrapperMap');
 
             blur.classList.toggle('blur');

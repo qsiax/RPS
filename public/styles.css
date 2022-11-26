@@ -260,11 +260,12 @@ body.dark .rating__box {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 100000;
+  z-index: 9000000;
 }
 
 .firts {
   background: #0047FF;
+  left: 0;
 }
 
 .second {
@@ -283,7 +284,17 @@ body.dark .rating__box {
 }
 
 .five {
-  left: 66.6%;
+  left: 66.4%;
+  background: #0047FF;
+}
+
+.six {
+  left: 83%;
+  background: #0047FF;
+}
+
+.seven {
+  left: 83%;
   background: #0047FF;
 }
 
@@ -303,7 +314,7 @@ body.dark .rating__box {
   overflow: hidden;
 }
 
-.wrapper.popupMain {
+.wrapper.popup {
   filter: blur(15px);
   pointer-events: none;
   user-select: none;
@@ -553,6 +564,8 @@ body.dark .rating__box {
 }
 .header__navigation li {
   margin-right: 50px;
+  transform: translateY(-50px);
+  opacity: 0;
 }
 .header__navigation li:last-child {
   margin-right: 0;
@@ -637,14 +650,29 @@ body.dark .rating__box {
 .main__block {
   position: relative;
 }
-.main__title {
-  max-width: 549px;
+.main__title-wrap {
+  width: 549px;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 20px;
   padding-top: 57px;
 }
+.main__title {
+  max-width: 549px;
+  transform: translateY(200px);
+}
+.main__text-wrap {
+  width: 511px;
+  height: 58px;
+  margin-bottom: 80px;
+  overflow: hidden;
+}
 .main__text {
   max-width: 511px;
-  margin-bottom: 80px;
+  transform: translateY(-200px);
 }
 .main__btn {
   padding-top: 20px;
@@ -685,9 +713,10 @@ body.dark .rating__box {
   border-radius: 30px;
 }
 .main__slider {
-  width: 710px;
+  width: 0px;
   height: 440px;
   border-radius: 30px;
+  overflow: hidden;
 }
 .main__slide {
   height: 100%;
@@ -718,6 +747,8 @@ body.dark .rating__box {
 }
 .main__el {
   position: absolute;
+  opacity: 0;
+  transform: scale(0);
 }
 .main__el:nth-child(1) {
   top: 20px;
@@ -792,7 +823,7 @@ body.dark .rating__box {
   height: 483px;
   background: url(assets/images/rocket-69169bf4dcd172660649.png);
   background-size: cover;
-  transform: rotate(0deg);
+  transform: rotate(0deg) translateY(500px) translateX(-100px);
 }
 
 .directory__body {
@@ -992,9 +1023,12 @@ body.dark .rating__box {
 }
 .rating__box {
   width: 100%;
-  height: 894px;
+  height: 950px;
   background: #fff;
   border-radius: 50px;
+  padding-left: 100px;
+  padding-top: 60px;
+  padding-right: 201px;
 }
 .rating__footer {
   position: relative;
@@ -1017,6 +1051,94 @@ body.dark .rating__box {
 }
 .rating__footer-el:nth-child(2) {
   margin-left: 90px;
+}
+.rating__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 65px;
+}
+.rating__item:last-child {
+  margin-bottom: 50px;
+}
+.rating__item * {
+  color: #00214A;
+}
+.rating__item-block {
+  display: flex;
+  align-items: center;
+  min-width: 278px;
+}
+.rating__item-logo {
+  width: 65px;
+  height: 54px;
+  background: url(assets/images/rating-logo-39258335f2b5911e5cf8.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 40px;
+}
+.rating__item-user-title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 160%;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+}
+.rating__item-user-subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  letter-spacing: 0.005em;
+  color: #0047FF;
+}
+.rating__item-submit {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 160%;
+  letter-spacing: 0.005em;
+}
+.rating__item-score {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 160%;
+  letter-spacing: 0.005em;
+}
+.rating__item-rate {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 160%;
+  letter-spacing: 0.005em;
+}
+.rating__item-btn {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 160%;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+  background: #0047FF;
+  border-radius: 50px;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-bottom: 21px;
+  padding-right: 22.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 372px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.rating__item-btn:hover {
+  transform: scale(1.05);
+}
+.rating__item-btn-icon {
+  width: 26px;
+  height: 26px;
+  background: url(assets/images/main-arrow-9ae2a7744dc9feda56e1.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 10px;
 }
 
 .contact {
@@ -1320,7 +1442,7 @@ body.pageDark .header-page__profile-icon {
   margin: 60px auto;
 }
 
-.popup {
+.popupForm {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -1336,23 +1458,23 @@ body.pageDark .header-page__profile-icon {
   visibility: hidden;
   transition: 0.5s ease;
 }
-.popup.active {
+.popupForm.active {
   visibility: visible;
   opacity: 1;
   top: 50%;
 }
-.popup p {
+.popupForm p {
   font-size: 22px;
   font-weight: 500;
 }
-.popup input {
+.popupForm input {
   height: 32px;
   margin-bottom: 20px;
 }
-.popup input::placeholder {
+.popupForm input::placeholder {
   color: #9FA0AB;
 }
-.popup button {
+.popupForm button {
   margin-top: 20px;
   height: 50px;
   width: 100%;
@@ -1366,11 +1488,11 @@ body.pageDark .header-page__profile-icon {
   visibility: hidden;
   transition: 0.3s ease;
 }
-.popup button.active {
+.popupForm button.active {
   opacity: 1;
   visibility: visible;
 }
-.popup .form-btn {
+.popupForm .form-btn {
   margin-top: 20px;
   height: 50px;
   width: 100%;
@@ -1499,9 +1621,6 @@ body.pageDark .header-page__profile-icon {
 
   .main__title {
     max-width: 549px;
-    margin-bottom: 15px;
-    padding-top: 0px;
-    margin-left: 13px;
   }
 
   .main__text {
@@ -1509,7 +1628,25 @@ body.pageDark .header-page__profile-icon {
     font-weight: 500;
     font-size: 14px;
     line-height: 160%;
+  }
+
+  .main__title-wrap {
+    width: 332px;
+    height: 68px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    padding-top: 0px;
+    margin-left: 13px;
+  }
+
+  .main__text-wrap {
+    width: 330px;
+    height: 44px;
     margin-bottom: 50px;
+    overflow: hidden;
   }
 
   .main__el {
@@ -1517,7 +1654,7 @@ body.pageDark .header-page__profile-icon {
   }
 
   .main__slider {
-    width: 344px;
+    max-width: 344px;
     height: 213px;
     border-radius: 30px;
   }

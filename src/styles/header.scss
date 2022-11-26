@@ -53,6 +53,8 @@
         padding-right: 228px;
         li {
             margin-right: 50px;
+            transform: translateY(-50px);
+            opacity: 0;
             &:last-child {
                 margin-right: 0;
             }

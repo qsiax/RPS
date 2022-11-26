@@ -20,19 +20,32 @@
         position: relative;
     }
 
-    // .main__title
-
-    &__title {
-        max-width: 549px;
+    &__title-wrap {
+        width: 549px;
+        height: 200px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin-bottom: 20px;
         padding-top: 57px;
     }
 
-    // .main__text
+    &__title {
+        max-width: 549px;
+        transform: translateY(200px);
+    }
+
+    &__text-wrap {
+        width: 511px;
+        height: 58px;
+        margin-bottom: 80px;
+        overflow: hidden;
+    }
 
     &__text {
         max-width: 511px;
-        margin-bottom: 80px;
+        transform: translateY(-200px);
     }
 
     // .main__btn
@@ -82,9 +95,10 @@
      // .main__slider
 
     &__slider {
-        width: 710px;
+        width: 0px;
         height: 440px;
         border-radius: 30px;
+        overflow: hidden;
     }
     
     // .main__slider-wrapper
@@ -130,6 +144,8 @@
 
     &__el {
         position: absolute;
+        opacity: 0;
+        transform: scale(0);
         &:nth-child(1) {
             top: 20px;
             right: -10px;

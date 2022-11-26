@@ -14,11 +14,13 @@
 
 <body>
 	<!-- PRELOADER -->
-	<div class="overlay second"></div>
 	<div class="overlay firts"></div>
+	<div class="overlay second"></div>
+	<div class="overlay third"></div>
 	<div class="overlay four"></div>
 	<div class="overlay five"></div>
 	<div class="overlay six"></div>
+	<div class="overlay seven"></div>
 
 	<!-- POPUP -->
 	<div class="auth">
@@ -96,8 +98,12 @@
 				<div class="main__container _container">
 					<div class="main__body">
 						<div class="main__block">
-							<div class="main__title title">Вместе сделаем якутию - Надежной</div>
-							<div class="main__text text-2level">Открытая площадка с комментированием работы ИП</div>
+							<div class="main__title-wrap">
+								<div class="main__title title">Вместе сделаем якутию - Надежной</div>
+							</div>
+							<div class="main__text-wrap">
+								<div class="main__text text-2level">Открытая площадка с комментированием работы ИП</div>
+							</div>
 							<a href="map.php" class="main__btn">Узнать Больше <div class="main__btn-icon"></div></a>
 							<div class="main__el-wrapper">
 								<div class="main__el"></div>
@@ -241,7 +247,84 @@
 							<div class="rating__title title">Рейтинг участников</div>
 						</div>
 						<div class="rating__block">
-							<div class="rating__box"></div>
+							<div class="rating__box">
+
+								<div class="rating__item">
+									<div class="rating__item-block">
+										<div class="rating__item-logo"></div>
+										<div class="rating__item-user">
+											<div class="rating__item-user-title">Anonimus_12</div>
+											<div class="rating__item-user-subtitle">1 место</div>
+										</div>
+									</div>
+									<div class="rating__item-submit">42 одобренных заявок</div>
+									<div class="rating__item-score">390 баллов</div>
+									<div class="rating__item-rate">Рейтинг №1</div>
+								</div>
+								<div class="rating__item">
+									<div class="rating__item-block">
+										<div class="rating__item-logo"></div>
+										<div class="rating__item-user">
+											<div class="rating__item-user-title">Destroyer</div>
+											<div class="rating__item-user-subtitle">2 место</div>
+										</div>
+									</div>
+									<div class="rating__item-submit">42 одобренных заявок</div>
+									<div class="rating__item-score">390 баллов</div>
+									<div class="rating__item-rate">Рейтинг №2</div>
+								</div>
+								<div class="rating__item">
+									<div class="rating__item-block">
+										<div class="rating__item-logo"></div>
+										<div class="rating__item-user">
+											<div class="rating__item-user-title">Eva1</div>
+											<div class="rating__item-user-subtitle">3 место</div>
+										</div>
+									</div>
+									<div class="rating__item-submit">42 одобренных заявок</div>
+									<div class="rating__item-score">390 баллов</div>
+									<div class="rating__item-rate">Рейтинг №3</div>
+								</div>
+								<div class="rating__item">
+									<div class="rating__item-block">
+										<div class="rating__item-logo"></div>
+										<div class="rating__item-user">
+											<div class="rating__item-user-title">Anonimus_103</div>
+											<div class="rating__item-user-subtitle">4 место</div>
+										</div>
+									</div>
+									<div class="rating__item-submit">42 одобренных заявок</div>
+									<div class="rating__item-score">390 баллов</div>
+									<div class="rating__item-rate">Рейтинг №4</div>
+								</div>
+								<div class="rating__item">
+									<div class="rating__item-block">
+										<div class="rating__item-logo"></div>
+										<div class="rating__item-user">
+											<div class="rating__item-user-title">Becon99</div>
+											<div class="rating__item-user-subtitle">5 место</div>
+										</div>
+									</div>
+									<div class="rating__item-submit">42 одобренных заявок</div>
+									<div class="rating__item-score">390 баллов</div>
+									<div class="rating__item-rate">Рейтинг №5</div>
+								</div>
+								<div class="rating__item">
+									<div class="rating__item-block">
+										<div class="rating__item-logo"></div>
+										<div class="rating__item-user">
+											<div class="rating__item-user-title">Anonimus_9</div>
+											<div class="rating__item-user-subtitle">6 место</div>
+										</div>
+									</div>
+									<div class="rating__item-submit">42 одобренных заявок</div>
+									<div class="rating__item-score">390 баллов</div>
+									<div class="rating__item-rate">Рейтинг №6</div>
+								</div>
+
+								<div class="rating__item-btn" onclick="authToggle()">Посмотреть весь рейтинг <div class="rating__item-btn-icon"></div></div>
+
+							</div>
 						</div>
 					</div>
 				</div>

@@ -71,3 +71,53 @@ TweenMax.to('.six', 1.5, {
 	height: "0%",
 	ease: Expo.easeInOut
 })
+
+TweenMax.to('.seven', 1.5, {
+	delay: 1.9,
+	height: "0%",
+	ease: Expo.easeInOut
+})
+
+TweenMax.to('.main__slider', 1.5, {
+	delay: 2,
+	width: "710px",
+	ease: Expo.easeInOut
+})
+
+TweenMax.to('.header__navigation li', 1.5, {
+	delay: 2,
+	transform: "translateY(0)",
+	opacity: "1",
+	stagger: .2,
+	ease: Expo.easeInOut
+})
+
+TweenMax.to('.main__title', 1.5, {
+	delay: 2.2,
+	transform: "translateY(0)",
+	ease: Expo.easeInOut
+})
+
+TweenMax.to('.main__text', 1.5, {
+	delay: 2.2,
+	transform: "translateY(0)",
+	ease: Expo.easeInOut
+})
+
+TweenMax.to('.main__el', 1.5, {
+	delay: 2.9,
+	transform: "scale(1)",
+	opacity: 1,
+	ease: Expo.easeInOut
+})
+
+gsap.to(".service__element", {
+	scrollTrigger: {
+		trigger: ".service",
+		start: 'top center',
+		toggleActions: "restart play reverse restart"
+	},
+	y: -1000,
+	x: 150,
+	duration: 2.5,
+})

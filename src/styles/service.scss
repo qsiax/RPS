@@ -99,6 +99,6 @@
         height: 483px;
         background: url(/img/rocket.png);
         background-size: cover;
-        transform: rotate(0deg);
+        transform: rotate(0deg) translateY(500px) translateX(-100px);
     }
 }
